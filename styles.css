@@ -1,0 +1,158 @@
+/* fonts */
+
+@font-face {
+    /* Con fontface podemos incluir fuentes personalizadas que tengamos descargadas en el equipo */
+    font-family: "STARWARS";
+    /* el font-family es como un alias, puede llamarse como queramos */
+    src:
+        /* los src linkean donde tengan la fuente... traten de tenerla en  */
+        url("./assets/STARWARS/STARWARS.eot") format("eot"),
+        url("./assets/STARWARS/STARWARS.woff") format("woff"),
+        url("./assets/STARWARS/STARWARS.ttf") format("truetype"),
+        url("./assets/STARWARS/STARWARS.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+
+/* Colors */
+:root {
+    --main-dark-color: #252422;
+    --main-grey-color: #403D39;
+    --main-mediumgrey-color: #CCC5B9;
+    --main-light-grey: #FFFCF2;
+    --main-light-orange: #EB5E28;
+    --main-orange-shade:#a53e15;
+}
+
+/* resets */
+* {
+    margin: 0;
+    padding: 1%;
+}
+
+body {
+    background-color: var(--main-dark-color);
+    color: var(--main-mediumgrey-color);
+}
+
+h1 {
+    font-family: "STARWARS", sans-serif;
+}
+
+p,
+li,
+button {
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+/* header/navbar */
+
+header {
+    display: flex;
+    align-content: space-between;
+    background-color: var(--main-grey-color);
+    padding: 8%;
+    margin: -2%;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--main-light-grey);
+    font-size: 1.7em;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: var(--main-grey-color);
+    max-width: 160px;
+    padding: 12px 16px;
+    z-index: 5;
+    top: 35px;
+    /* para que la hamburguesa quede a la derecha */
+    right: -30px;
+}
+
+.menu:hover .dropdown {
+    display: block;
+}
+.dropdown li {
+    list-style: none;
+}
+
+/* cuerpo */
+
+.description {
+    margin-top: 5%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    text-align: center;
+    margin: auto;
+}
+
+main img {
+    height: 150px;
+}
+
+/* producto */
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0;
+    border: 2px solid var(--main-grey-color);
+    padding: 3%;
+    box-shadow: 4px 4px 6px 1px var(--main-dark-color);
+}
+
+.imgcontainer {
+    position: relative;
+}
+
+.imgcontainer .heart {
+    position: absolute;
+    top: 6%;
+    right: 9%;
+    font-size: 1.5em;
+    box-shadow: 4px 4px 6px 1px var(--main-dark-color);
+}
+
+.product button,
+.product button:visited {
+    margin: 5% 0;
+    width: 90%;
+    background-color:var(--main-light-orange);
+    border-radius: 15px;
+    border: 2px solid var(--main-dark-color);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.product button a {
+    text-decoration: none;
+    color: var(--main-light-grey);
+}
+
+.product button a:hover {
+    background-color: var(--main-orange-shade);
+}
+
+.product button a,
+.product button a:visited {
+    text-decoration: none;
+    color: var(--main-light-grey);
+}
